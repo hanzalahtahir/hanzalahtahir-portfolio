@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <title>Hanzalah Tahir</title>
+</head>
+
+<body class="animate__animated animate__fadeIn">
+  <canvas id="lines-demo"> </canvas>
+  <div style="
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 1000px;
+        z-index: 5;
+      " class="draggable" class="ui-widget-content">
+    <nav class="navbar navbar-expand-lg bg-body-primary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text_light active" aria-current="page" href="#about_section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_light" href="index.html#project_section">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text_light" href="index.html#contact_section">Contact me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="width: 80%; margin-top: 60px !important; z-index: 100" class="m-auto">
+      <div class="horizontalDivs d-flex flex-column flex-md-row-reverse justify-content-md-between">
+        <div class="">
+          <img src="assets/papa2.jpg" alt="Profile Picture" class="profile_image mb-3" style="
+                border-radius: 50%;
+                width: 300px;
+                height: 250px;
+                object-fit: cover;
+                object-position: top;
+                border: 1px solid #bbe0eb;
+                padding: 3px;
+              " />
+        </div>
+        <div class="">
+          <h1 class="text_light main_heading font_standard">
+            Hello World, I'm<br />
+            Hanzalah
+          </h1>
+          <p class="text_light primary_heading font_standard" style="font-weight: 100">
+            I am a passionate and dedicated web developer skilled in creating user-friendly and visually appealing
+            websites. With experience in both front-end and back-end development, I specialize in using modern
+            frameworks and technologies like React, HTML, CSS, and JavaScript.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 80%; margin-top: 60px !important; z-index: 100" class="m-auto row d-flex flex-wrap">
+      <h1 class="text_light main_heading font_standard" style="margin-bottom: 20px; text-align: center">
+        My Skills
+      </h1>
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/react.svg" alt="reactjs" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            React JS
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/redux.svg" alt="redux" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">Redux</p>
+        </div>
+      </div>
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all mobile">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javaScript" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            JavsScript
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all front_tech">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/html-5.png" alt="html5" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">HTML5</p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all front_tech">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/css-3.png" alt="css3" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">CSS3</p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all front_tech">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/bootstrap-logo-shadow.png" alt="bootstrap"
+            decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            Bootstrap
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/TailwindCSS.png" alt="tailwindcss" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            Tailwind CSS
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/MaterialUI.png" alt="materialui" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            Material UI
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/GitHub.png" alt="github" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">Github</p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/mongo.svg" alt="mongodb" decoding="async"
+            style="object-fit: contain; padding-left: 0; margin-right: 10px; float: left;" />
+          <p class="text_light font_standard secondary_heading m-0">
+            MongoDB
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/icon-linkedin.png" alt="nosql" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            LinkedIn
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/nodejs.svg" alt="nodejs" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            Node.js
+          </p>
+        </div>
+      </div>
+
+      <div class="my-2 col-4 col-sm-4 col-md-3 col-lg-3 all web">
+        <div class="tech-image-wrapper img_wrapper">
+          <img loading="lazy" class="image-fluid" src="assets/sass.svg" alt="npm" decoding="async" />
+          <p class="text_light font_standard secondary_heading m-0">
+            Sass
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="width: 80%; margin-top: 60px !important; z-index: 100" class="m-auto" id="about_section">
+      <h1 class="text_light main_heading font_standard" style="margin-bottom: 20px; text-align: center">
+        About Me
+      </h1>
+      <div class="horizontalDivs">
+        <p class="text_light primary_heading font_standard about_content" style="font-weight: 100">
+          As a web development enthusiast, I am dedicated to expanding my knowledge and skills in creating innovative
+          and user-friendly web applications. I am particularly interested in exploring new technologies and
+          methodologies to deliver impactful digital experiences. My goal is to continuously learn and grow in this
+          dynamic field, leveraging modern frameworks and technologies like React, HTML, CSS, and JavaScript.
+        </p>
+        <p class="text_light primary_heading font_standard about_content" style="font-weight: 100">
+          I am driven by a passion for technology and a commitment to excellence. I believe in the power of
+          collaboration and open communication to achieve successful project outcomes. Whether working independently or
+          as part of a team, I am committed to delivering high-quality work that meets or exceeds expectations.
+        </p>
+      </div>
+    </div>
+    <div style="width: 80%; margin-top: 60px !important; z-index: 100" class="m-auto" id="project_section">
+      <h1 class="text_light main_heading font_standard" style="margin-bottom: 20px; text-align: center">
+        Projects
+      </h1>
+      <div style="
+            margin-top: 50px !important;
+            /* column-gap: 40px;
+            row-gap: 40px;
+            width: 100%; */
+          " class="m-auto d-flex flex-wrap row-gap-3 contact_section justify-content-center align-items-stretch">
+        <div class="card project_card">
+          <img class="card-img-top" src="assets/project/watershedmedia.png" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title primary_heading font_standard" style="font-weight: 500">
+              <p>real-estate </p>
+              <p class="card-text secondary_heading font_standard">
+                The Real Estate website is a user-friendly platform designed to facilitate the buying, selling, and
+                renting of properties. With advanced search features and detailed listings, it provides users with a
+                seamless experience in navigating the real estate market.
+              </p>
+              <div class="d-flex flex-wrap">
+                <div class="project-tech-image-wrapper">
+                  <img loading="lazy" class="image-fluid" src="assets/react.png" alt="react" decoding="async" />
+                </div>
+                <div class="project-tech-image-wrapper">
+                  <img loading="lazy" class="image-fluid" src="assets/redux.svg" alt="redux" decoding="async" />
+                </div>
+                <div class="project-tech-image-wrapper">
+                  <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javascript" decoding="async" />
+                </div>
+                <div class="project-tech-image-wrapper">
+                  <img loading="lazy" class="image-fluid" src="assets/TailwindCSS.png" alt="tailwind"
+                    decoding="async" />
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="card project_card">
+          <img class="card-img-top" src="assets/expensetracker.jpeg" alt="Expense Tracker image" />
+          <div class="card-body">
+            <h5 class="card-title primary_heading font_standard" style="font-weight: 500">
+              Expense Tracker
+            </h5>
+            <p class="card-text secondary_heading font_standard">
+              The Expense Tracker app helps users manage their finances by tracking income and expenses in real-time.
+              Users can categorize their transactions, set budgets, and visualize their spending habits through
+              interactive charts and reports.
+            </p>
+            <div class="d-flex flex-wrap">
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/react.png" alt="react" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/redux.svg" alt="redux" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javascript" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card project_card">
+          <img class="card-img-top" src="assets/colorgb.jpeg" alt="Card image cap" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title primary_heading font_standard" style="font-weight: 500">
+              Color Change On Button Click
+            </h5>
+            <p class="card-text secondary_heading font_standard">
+              The background color changer in React lets users change the background color with a button click. It uses
+              useState to manage color and applies it dynamically.
+            </p>
+            <div class="d-flex flex-wrap mt-auto">
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/react.png" alt="react" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javascript" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/firebase.png" alt="firebase" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card project_card">
+          <img class="card-img-top" src="assets/todo.jpeg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title primary_heading font_standard" style="font-weight: 500">
+              Todo App
+            </h5>
+            <p class="card-text secondary_heading font_standard">
+              The mobile to-do app helps users organize tasks efficiently. It allows adding, editing, and deleting tasks
+              with a simple and user-friendly interface to boost productivity.
+            </p>
+            <div class="d-flex flex-wrap">
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/react.png" alt="react" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javascript" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/firebase.png" alt="firebase" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card project_card">
+          <img class="card-img-top" src="assets/e.jpeg" alt="Card image cap" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title primary_heading font_standard" style="font-weight: 500">
+              E-commerce Website
+            </h5>
+            <p class="card-text secondary_heading font_standard">
+              The e-commerce website allows users to browse, search, and purchase products easily. It offers categories,
+              secure checkout, and a user-friendly interface for a seamless shopping experience.
+            </p>
+            <div class="d-flex flex-wrap mt-auto">
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/js.svg" alt="javascript" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/bootstrap-logo-shadow.png" alt="bootstrap"
+                  decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/html-5.png" alt="html" decoding="async" />
+              </div>
+              <div class="project-tech-image-wrapper">
+                <img loading="lazy" class="image-fluid" src="assets/css-3.png" alt="css3" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width: 80%; margin-top: 60px !important; z-index: 100" class="m-auto" id="contact_section">
+      <h1 class="text_light main_heading font_standard" style="margin-bottom: 20px; text-align: center">
+        Contact Me
+      </h1>
+      <div style="width: 80%; margin-top: 50px !important"
+        class="m-auto d-flex flex-wrap contact_section justify-content-center align-items-center">
+        <a class="inner_box" href="https://www.linkedin.com/in/hanzalah-tahir-10a95032a/" target="_blank">
+          <div class="contact_icon_wrapper">
+            <img loading="lazy" class="image-fluid" src="assets/icon-linkedin.png" alt="linkedin" decoding="async" />
+          </div>
+        </a>
+        <a class="inner_box" href="https://github.com/Tahiralmadni" target="_blank">
+          <div class="contact_icon_wrapper">
+            <img loading="lazy" class="image-fluid" src="assets/icon-github.png" alt="github" decoding="async" />
+          </div>
+        </a>
+      </div>
+      <p class="font_standard primary_heading mt-3" style="text-align: center; color: white">
+        <span style="color: yellow; font-size: 20px">Gmail: </span>
+        Hanzalahtahir92@gmail.com
+      </p>
+      <p><span style="color: yellow; font-size: 20px">Phone: </span> 03018544514</p>
+    </div>
+    <button id="scrollToTop"
+      style="position: fixed; bottom: 20px; right: 20px; display: none; background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 10px 15px; cursor: pointer; z-index: 1000;">
+      <i class="fa-regular fa-hand-point-up"></i>
+    </button>
+    <script>
+      window.onscroll = function () {
+        var button = document.getElementById('scrollToTop');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+      };
+      document.getElementById('scrollToTop').onclick = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    </script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT0to5eqruptLy" crossorigin="anonymous"></script>
+
+  <script src="canvas.js"></script>
+</body>
+
+</html>
